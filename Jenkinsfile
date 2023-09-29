@@ -43,7 +43,7 @@ pipeline {
                 echo "Deploy the images"
 
                 // Start containers using Docker Compose
-                sh 'docker run -d -p 3002:3000 --name nextjs-sal1 sal02'
+                sh 'docker run -d -p 3003:3000 --name nextjs-sal1 sal02'
             }
         }
     }
