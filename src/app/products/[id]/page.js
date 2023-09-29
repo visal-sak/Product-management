@@ -1,5 +1,5 @@
 
-import React, { Suspense } from "react";
+import React from "react";
 
 async function fetchProductId(id) {
   const res = await fetch(
