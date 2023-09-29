@@ -7,27 +7,27 @@ async function fetchProductId(id) {
   );
   return res.json();
 }
-export async function generateMetadata({ params }) {
-  const product = await fetchProductId(params.id);
-  return {
-    title: product.title,
-    description: product.description,
-    thumbnail: product.images[0],
-    metadataBase: new URL("https://acme.com"),
-    alternates: {
-      canonical: "/",
-      languages: {
-        "en-US": "/en-US",
-        "de-DE": "/de-DE",
-      },
-    },
-    openGraph: {
-      images: product.images[0],
-      title: product.title,
-      description: product.description,
-    },
-  };
-}
+// export async function generateMetadata({ params }) {
+//   const product = await fetchProductId(params.id);
+//   return {
+//     title: product.title,
+//     description: product.description,
+//     thumbnail: product.images[0],
+//     metadataBase: new URL("https://acme.com"),
+//     alternates: {
+//       canonical: "/",
+//       languages: {
+//         "en-US": "/en-US",
+//         "de-DE": "/de-DE",
+//       },
+//     },
+//     openGraph: {
+//       images: product.images[0],
+//       title: product.title,
+//       description: product.description,
+//     },
+//   };
+// }
 
 export default async function ProductData({ params }) {
   const { id } = params;
