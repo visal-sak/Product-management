@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Get source code from git') {
             steps {
-               git branch: 'main', url: 'https://github.com/visal-sak/Data-Table-Next-js'
+               git branch: 'main', url: 'https://github.com/visal-sak/Product-management'
                 sh '''
                     whoami
                     pwd
