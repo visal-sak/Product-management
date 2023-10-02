@@ -40,8 +40,8 @@ pipeline {
 
                                         sh '''
                     docker login -u $USERNAME -p $PASSWORD
-                    docker tag sal02 sakvisal/sal02:latest
-                    docker push sakvisal/sal02:latest
+                    docker tag sal02 sakvisal/nextjs:latest
+                    docker push sakvisal/nextjs:latest
                     '''
     // some block
 }
