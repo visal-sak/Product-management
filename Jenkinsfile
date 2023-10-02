@@ -36,6 +36,15 @@ pipeline {
                 //     docker push muyleangin/nextjsv1:1.1
                 //     '''
                 // }
+                withCredentials([usernamePassword(credentialsId: 'dockerhub_accessToken', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
+
+                                        sh '''
+                    docker login -u $USERNAME -p $PASSWORD
+                    docker tag sal02 sakvisal/sal02:latest
+                    docker push sakvisal/sal02:latest
+                    '''
+    // some block
+}
             }
         }
         stage("Deploy") {
